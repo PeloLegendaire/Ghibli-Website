@@ -1,0 +1,73 @@
+#next {
+    position: absolute;
+    top: 350px;
+    left: 1750px;
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid rgb(224, 241, 255);
+    border-right: 3px solid rgb(224, 241, 255);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+#previous {
+    position: absolute;
+    top: 350px;
+    left: 120px;
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid rgb(224, 241, 255);
+    border-left: 3px solid rgb(224, 241, 255);
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.perspective {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 75%;
+    perspective: 100rem;
+}
+
+.container {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    cursor: pointer;
+    width: 33%;
+    height: 50%;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    margin: 1rem;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: inherit;
+    border-radius: 12px;
+    background-color: rgb(224, 241, 255);
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .container {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  }
+
+
+
